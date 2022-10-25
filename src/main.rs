@@ -1,9 +1,13 @@
 fn main() {
     // variable_declare();
+
     // variable_destruct();
+
     // variable_shadow();
 
-    variable_int_float();
+    // variable_int_float();
+
+    variable_char_bool_tuble();
 }
 
 // 变量绑定、可变性
@@ -24,7 +28,7 @@ fn variable_destruct() {
     assert_eq!(a, b);
 
     struct Struct {
-        e: i32,
+        e: i32, 
     }
     let (a, b, c, d, e);
 
@@ -73,8 +77,8 @@ fn variable_int_float() {
     println!("intNum is {}, floatNum is {}", int_num, float_num);
 
     // NaN类型：数学上未定义的结果
-    let nan = float_num.sqrt(); // NaN
-    assert_eq!(nan, nan);
+    // let nan = float_num.sqrt(); // NaN
+    // assert_eq!(nan, nan);
 
     // 对于较长的数字，可以用_进行分割，提升可读性
     let one_million: i64 = 1_000_000;
@@ -88,4 +92,28 @@ fn variable_int_float() {
     for i in 1..=5 {
         println!("{}", i);
     }
+}
+
+
+fn variable_char_bool_tuble() {
+    //char
+    let c = 'z';
+    let z = 'ℤ';
+    let g = '国';
+    let heart_eyed_cat = '😻';
+
+    println!("c is {}, z is {}, g is {}, heart_eyed_cat is {}", c, z, g, heart_eyed_cat);
+
+    //bool
+    let t = true;
+    let f:bool = false;
+
+    if f || t {
+        println!("hello rust");
+    }
+
+    //unit
+    let unit = ();
+    println!("unit is {:?}", unit);
+
 }
